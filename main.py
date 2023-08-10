@@ -10,21 +10,27 @@ for part in msg.get_payload():
         break
 
 soup = BeautifulSoup(html, "html.parser")
-qna = ""
+qna = []
 
+# All the questions are in <h2> tags
 for el in soup.find_all("h2"):
-    el: Tag
+    el: Tag  # For better linting
+    question = el.get_text().replace("\n", "")
 
-    if len(el.contents) != 2:
+    if not question.endswith("*"):
         continue
 
-    question = el.contents[0].get_text().strip()
+    # Remove the "*" at the end
+    question = question[:-1].strip()
 
-    if question == "Class" or question == "Index Number":
+    if question in ("Class", "Index Number"):
         continue
 
     answer = el.parent.nextSibling.get_text().strip()
-    qna += f"{question}\t{answer}\n"
+    qna.append(f"{question}\t{answer}")
 
 with open("output.txt", "w") as f:
-    f.write(qna)
+    f.write("\n".join(qna))
+
+quiz_name = soup.find_all("h1")[1].get_text()
+print(f'Extracted Q&As from "{quiz_name}" (written to "output.txt")')
