@@ -1,0 +1,729 @@
+Delivered-To: haziq_danish_bin_hairil_rizal@s2020.ssts.edu.sg
+Received: by 2002:a05:6021:9099:b0:294:f332:27dd with SMTP id fl25csp642007wdc;
+        Sun, 6 Aug 2023 08:16:40 -0700 (PDT)
+X-Received: by 2002:a05:6870:ec9e:b0:196:45b7:9385 with SMTP id eo30-20020a056870ec9e00b0019645b79385mr6719216oab.27.1691334999953;
+        Sun, 06 Aug 2023 08:16:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1691334999; cv=none;
+        d=google.com; s=arc-20160816;
+        b=qyECbwdAXeWr8byJV89Y4jF09ILf0cF7y+QeTPl9bqs2IKDnh0zBoV8QW6XbH6+Z6o
+         EV7/O18DQ3hH1AmA5FpTR5DppiUeMJ+qlDce6aXXUcYL/Hxr6mzzxQBijMh/oFO3XJlb
+         WJDmTzJinO7v1UFr0ZA0ZCwQ5E8g/xJaeU4o26SHVDWxc7Is3I4wDA6/HFpR5oX3hatm
+         kWXAtJXXqvFQ0qKmcZSr8eutF5Lb2iMZ4HkzJwTyuhuN8Zhz2zJx1WOZq1h/qgwuZy62
+         j2EdVz/Vg5ZdpYF16obkQK16kEEoaTqQVHcSlGZJs6Mb8oLwN2uGHHyZ9E+VHyv1wwCJ
+         o/zQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=KLBf7i+zpGerjD5ApM/N4uQUX481QazDPxk/hdIrmsg=;
+        fh=FwO6E5Mx52YeUW56gh/ZF4v+1srs8AvCpnesWNplUDQ=;
+        b=Da8ellkibHmHS9ok5wBf8ZxJJLdnWWBMQdGBTPAppGIihc905IGt9D132BUTfC8VIi
+         Br7y/LObamYJlB06esNceSn7rB45VH13hblMkWNGHIKta1BdKxYHhLFHdqxoR8o4SotC
+         d3WMWZErFpZ37psjXTMbPam8N1tVxvzO+GkxfWzrq09B1v0gvKyLTpxV19UIRrSFJ++j
+         tOq/CfsyeeN7Iv4HNjbg83uhJfCFR3MJIfNsUmJmhuFAkGNTrcMAlVDBFi0ViwjqmJ6i
+         G6CdH9cfnVlrFXq0gTyV/SXLZPBBQNRKPwmlARiP0OoIg81x94Jx+D8tm+jN2XKVIan3
+         HJuw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20221208 header.b="i60i3X/X";
+       spf=pass (google.com: domain of 3v7npzbykadyxgjek-jwuwahlk-fgjwhdqyggydw.uge@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3V7nPZBYKADYXgjek-jWUWahlk-fgjWhdqYggYdW.Uge@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3V7nPZBYKADYXgjek-jWUWahlk-fgjWhdqYggYdW.Uge@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id zf3-20020a0568716a8300b001ad160ce2ddsor5248175oab.15.2023.08.06.08.16.39
+        for <haziq_danish_bin_hairil_rizal@s2020.ssts.edu.sg>
+        (Google Transport Security);
+        Sun, 06 Aug 2023 08:16:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3v7npzbykadyxgjek-jwuwahlk-fgjwhdqyggydw.uge@trix.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20221208 header.b="i60i3X/X";
+       spf=pass (google.com: domain of 3v7npzbykadyxgjek-jwuwahlk-fgjwhdqyggydw.uge@trix.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3V7nPZBYKADYXgjek-jWUWahlk-fgjWhdqYggYdW.Uge@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20221208; t=1691334999; x=1691939799;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=KLBf7i+zpGerjD5ApM/N4uQUX481QazDPxk/hdIrmsg=;
+        b=i60i3X/X3TcZYeBcq8IFIPwrfFORwqFIxABXAH8LxqxrMyvIqxhb6faMUO5nt9crWf
+         KBh4KF1FaopxW2ULRFoBUoyvRRaJX+p4dSAMn6HWL8m+LvVSMd3W0yJU0GJ8uPZz1yNQ
+         VCbitxzZ02P3dlyjVHmiY/Rvjl29kq5nmsNXwhxl8VnbI0lw36ne8jhGcEcZS9p3hSgN
+         UgndcZ4barjVbFTHR/5sFSocfo/gxl32k7tKYTcwdB2ta65dZaBAXRlmV8z5C5YwGQ3m
+         QE4SVfqOV4Two4Un1O9qFVG/fFNxHzhhG3QO0VlLBiK9BupawOKjwXODCohzelE8WFks
+         VVMw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20221208; t=1691334999; x=1691939799;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=KLBf7i+zpGerjD5ApM/N4uQUX481QazDPxk/hdIrmsg=;
+        b=eivJ89WdfUwcbDfY4Is0HhWwoc2YzU8LdeJDzUxiqH97em4JUTbh630eTNZjRo1GIj
+         pPUOHDqOPX0WsB0/oTOKAzhx4wmp79O7ppC5+vdHiIUwlsanhcvFyyBZ/mJHnoF2W1WQ
+         SCK98ZOogTrwFaXGf5Y9Apzn9CCqq2X0MuTKaB6TtjodKKOxb4AxcO1XLreQalwx2SOd
+         nzOKRTTyx8En6v2NE8GTJ4yFPzWBaW4BPHBGCTSL+5AI1nniT6vjrYN9GXjkKmBZt1hu
+         BkAohlpTmHKY4gdMZbAlzPLszsU/2XMoTVuabUuT47QGsf74OogrLClMgjVJIuu3t/TQ
+         v/JA==
+X-Gm-Message-State: AOJu0YyXwnpL/mq+/dPFTIthOPPqm2tonLzUXcBMraUy+gLzYiTZFqgV
+	H7pgAeX7X4oej7LeQDR7P+MML6fkKwIelLgDDPMahdRNKnciCnDnojE=
+X-Google-Smtp-Source: AGHT+IEwQOC6E98dVi9dDdaaBN//BpWroHFtHGceGr8qKsSeAj6+TCiKcouwNawJqrn8ufHiwdV3Kxkq1vIsKZK8kaCnkg==
+MIME-Version: 1.0
+X-Received: by 2002:a05:6870:a444:b0:1bb:78b4:2e73 with SMTP id
+ n4-20020a056870a44400b001bb78b42e73mr7692284oal.5.1691334999284; Sun, 06 Aug
+ 2023 08:16:39 -0700 (PDT)
+Feedback-ID: MailTypeResponseReceipt:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLSciPoHtJRPmu4YCfvUpHH028Pl8NiWuzBvw7MsZ0rptI_R3nA
+X-GoogleForms-CustomerDisplayName: School of Science and Technology, Singapore
+Message-ID: <000000000000d43de20602429da5@google.com>
+Date: Sun, 06 Aug 2023 15:16:39 +0000
+Subject: Computing Keyword Revision Chapter 01
+From: Google Forms <forms-receipts-noreply@google.com>
+To: haziq_danish_bin_hairil_rizal@s2020.ssts.edu.sg
+Content-Type: multipart/alternative; boundary="000000000000d43dd50602429da2"
+
+--000000000000d43dd50602429da2
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+R29vZ2xlIEZvcm1zDQoNCg0KVGhhbmtzIGZvciBmaWxsaW5nIG91dCBDb21wdXRpbmcgS2V5d29y
+ZCBSZXZpc2lvbiBDaGFwdGVyIDAxDQpIZXJlJ3Mgd2hhdCB3YXMgcmVjZWl2ZWQuDQoNClZpZXcg
+c2NvcmUNCg0KDQpDb21wdXRpbmcgS2V5d29yZCBSZXZpc2lvbiBDaGFwdGVyIDAxDQoNClRoaXMg
+aXMgdGhlIGN1bG1pbmF0ZWQgcXVpeiBvZiB5b3VyIENvbXB1dGluZysgam91cm5leSBpbiBTU1Qu
+DQpUaGUgcXVpeiBpcyBjYXRlZ29yaXNlZCBpbnRvIGNoYXB0ZXJzIGFuZCBpcyByZWNvbW1lbmRl
+ZCBmb3IgcmVwZWF0ICANCmF0dGVtcHRzIHRvIHN0cmVuZ3RoZW4geW91ciBtZW1vcnkgb2YgdGhl
+IE8gTGV2ZWwgc3lsbGFidXMgY29udGVudC4NCkZPUiBBVVRPLU1BUktJTkcsIFBMRUFTRSBGT0xM
+T1cgVEhFIENBUElUQUxJU0FUSU9OIE9GIFRIRSBHSVZFTiBIRUxQSU5HICANCldPUkRTLg0KDQpZ
+b3VyIGVtYWlsIChoYXppcV9kYW5pc2hfYmluX2hhaXJpbF9yaXphbEBzMjAyMC5zc3RzLmVkdS5z
+Zykgd2FzIHJlY29yZGVkICANCndoZW4geW91IHN1Ym1pdHRlZCB0aGlzIGZvcm0uDQoNCg0KQ2xh
+c3MgKg0KDQoNClM0LTAxDQoNCg0KUzQtMDcNCg0KDQpTNC0wOA0KDQoNCkluZGV4IE51bWJlciAq
+DQoNCg0KMTUNCg0KDQoNClNlbGVjdCBmcm9tIHRoZSBmb2xsb3dpbmcgaGVscGluZyB3b3JkczoN
+Cg0KYml0LCBieXRlLCBjb21wdXRlciwgY29tcHV0ZXIgYXJjaGl0ZWN0dXJlLCBkYXRhLCBnaWJp
+Ynl0ZSwgZ2lnYWJ5dGUsICANCmtpYmlieXRlLCBraWxvYnl0ZSwgbWVnYWJ5dGUsIG1lYmlieXRl
+LCB0ZWJpYnl0ZSwgdGVyYWJ5dGUNCg0KDQpBL2FuIF9fX19fX19fX18gaXMgYSBkZXZpY2UgdGhh
+dCBjYW4gcmVjZWl2ZSBkYXRhLCBwcm9jZXNzIHRoZSBkYXRhICANCmFjY29yZGluZyB0byBhIHNl
+cXVlbmNlIG9mIGluc3RydWN0aW9ucyBhbmQgcHJvZHVjZSB0aGUgcHJvY2Vzc2VkIGRhdGEgYXMg
+YSAgDQpyZXN1bHQuICoNCg0KDQpjb21wdXRlcg0KDQoNCl9fX19fX19fX18gaXMgaW5mb3JtYXRp
+b24gdGhhdCBpcyB1c2VkIGluIGEgY29tcHV0ZXIgcHJvZ3JhbSAoc2luZ3VsYXI6ICANCmRhdHVt
+KS4gKg0KDQoNCmRhdGENCg0KDQpUaGUgX19fX19fX19fXyBkZXNjcmliZXMgaG93IGEgY29tcHV0
+ZXIgaXMgZGVzaWduZWQgYW5kIGJ1aWx0IHRvIGZ1bmN0aW9uLCAgDQppbmNsdWRpbmcgaG93IGl0
+cyBwYXJ0cyBhcmUgZGVzaWduZWQsIG9yZ2FuaXNlZCBhbmQgY29ubmVjdGVkLiAqDQoNCg0KY29t
+cHV0ZXIgYXJjaGl0ZWN0dXJlDQoNCg0KQS9hbiBfX19fX19fX19fLCBvciBiaW5hcnkgZGlnaXQs
+IGlzIHRoZSBzbWFsbGVzdCB1bml0IG9mIGRhdGEgaW4gYSAgDQpjb21wdXRlciB0aGF0IGNhbiB0
+YWtlIG9uIHRoZSB2YWx1ZSBvZiBlaXRoZXIgMCBvciAxLiAqDQoNCg0KYml0DQoNCg0KQS9hbiBf
+X19fX19fX19fIGlzIGEgdW5pdCBvZiBkYXRhIG1hZGUgdXAgb2YgOCBiaXRzLiAqDQoNCg0KYnl0
+ZQ0KDQoNCkEgX19fX19fX19fXyBpcyBtYWRlIHVwIG9mIDEsMDAwIGJ5dGVzLiAqDQoNCg0Ka2ls
+b2J5dGUNCg0KDQpBIF9fX19fX19fX18gaXMgbWFkZSB1cCBvZiAxIHggMTBeNiBieXRlcy4gKg0K
+DQoNCm1lZ2FieXRlDQoNCg0KQSBfX19fX19fX19fIGlzIG1hZGUgdXAgb2YgMSB4IDEwXjkgYnl0
+ZXMuICoNCg0KDQpnaWdhYnl0ZQ0KDQoNCkEgX19fX19fX19fXyBpcyBtYWRlIHVwIG9mIDEgeCAx
+MF4xMiBieXRlcy4gKg0KDQoNCnRlcmFieXRlDQoNCg0KQSBfX19fX19fX19fIGlzIG1hZGUgdXAg
+b2YgMTAyNCBieXRlcy4gKg0KDQoNCmtpYmlieXRlDQoNCg0KQSBfX19fX19fX19fIGlzIG1hZGUg
+dXAgb2YgMTAyNF4yIGJ5dGVzLiAqDQoNCg0KbWViaWJ5dGUNCg0KDQpBIF9fX19fX19fX18gaXMg
+bWFkZSB1cCBvZiAxMDI0XjMgYnl0ZXMuICoNCg0KDQpnaWJpYnl0ZQ0KDQoNCkEgX19fX19fX19f
+XyBpcyBtYWRlIHVwIG9mIDEwMjReNCBieXRlcy4gKg0KDQoNCnRlYmlieXRlDQoNCg0KU2VsZWN0
+IGZyb20gdGhlIGZvbGxvd2luZyBoZWxwaW5nIHdvcmRzOg0KDQphZGRyZXNzLCBhZGRyZXNzIGJ1
+cywgYXJpdGhtZXRpYyBsb2dpYyB1bml0LCBidXMsIGNlbnRyYWwgcHJvY2Vzc2luZyB1bml0LCAg
+DQpjb250cm9sIHVuaXQsIGRhdGEgYnVzLCBleGVjdXRlcywgaGFyZCBkaXNrLCBpbnB1dCwgaW5w
+dXQgZGV2aWNlLCBtYWduZXRpYywgIA0KbWVtb3J5LCBvcHRpY2FsLCBvdXRwdXQsIG91dHB1dCBk
+ZXZpY2UsIHByb2Nlc3NvciByZWdpc3RlcnMsIHJhbmRvbSBhY2Nlc3MgIA0KbWVtb3J5LCByZWFk
+LW9ubHkgbWVtb3J5LCBzZWNvbmRhcnkgc3RvcmFnZSwgc29mdHdhcmUsIHNvbGlkLXN0YXRlLCB2
+b2xhdGlsZQ0KDQoNCkEvYW4gX19fX19fX19fXyBvciBwcm9jZXNzb3IgcHJvY2Vzc2VzIGRhdGEg
+YW5kIGZvbGxvd3MgaW5zdHJ1Y3Rpb25zOyAgDQpjb25zaXN0cyBvZiBhbiBhcml0aG1ldGljIGxv
+Z2ljIHVuaXQgYW5kIGEgY29udHJvbCB1bml0LiAqDQoNCg0KY2VudHJhbCBwcm9jZXNzaW5nIHVu
+aXQNCg0KDQpfX19fX19fX19fIHN0b3JlcyBkYXRhLCBpbnN0cnVjdGlvbnMgYW5kIHRoZSByZXN1
+bHRzIG9mIHByb2Nlc3NpbmcgZm9yICANCmltbWVkaWF0ZSB1c2UgaW4gYSBjb21wdXRlci4gKg0K
+DQoNCm1lbW9yeQ0KDQoNCl9fX19fX19fX18gc3RvcmVzIGxhcmdlIGFtb3VudHMgb2YgZGF0YSB0
+aGF0IHdpbGwgbm90IGJlIGxvc3Qgd2hlbiB0aGUgIA0KcG93ZXIgc3VwcGx5IGlzIGludGVycnVw
+dGVkLiAqDQoNCg0Kc2Vjb25kYXJ5IHN0b3JhZ2UNCg0KDQpUaGUgX19fX19fX19fXyB0cmFuc2Zl
+cnMgZGF0YSBiZXR3ZWVuIG1lbW9yeSBhbmQgcHJvY2Vzc29yOyBpdCBpcyAgDQpiaS1kaXJlY3Rp
+b25hbC4gKg0KDQoNCmRhdGEgYnVzDQoNCg0KVGhlIF9fX19fX19fX18gdHJhbnNmZXJzIHRoZSBy
+ZXF1aXJlZCBtZW1vcnkgbG9jYXRpb24gZnJvbSBwcm9jZXNzb3IgdG8gIA0KbWVtb3J5OyBpdCBp
+cyB1bmktZGlyZWN0aW9uYWwuICoNCg0KDQphZGRyZXNzIGJ1cw0KDQoNClRoZSBfX19fX19fX18g
+cmVmZXJzIHRvIGRhdGEgb3IgaW5zdHJ1Y3Rpb25zIHRoYXQgdGhlIGNvbXB1dGVyIHJlY2VpdmVz
+IGZvciAgDQpwcm9jZXNzaW5nLiAqDQoNCg0KaW5wdXQNCg0KDQpUaGUgX19fX19fX19fIHJlZmVy
+cyB0byBpbnRlcm1lZGlhdGUgb3IgZmluYWwgcmVzdWx0cyBwcm9kdWNlZCBieSB0aGUgIA0KY29t
+cHV0ZXIgaW4gdGhlIGZvcm0gb2YgcHJvY2Vzc2VkIGRhdGEuICoNCg0KDQpvdXRwdXQNCg0KDQpU
+aGUgX19fX19fX19fX19fXyBpcyBwYXJ0IG9mIHRoZSBwcm9jZXNzb3IgdGhhdCBwcm9jZXNzZXMg
+ZGF0YSBieSAgDQpwZXJmb3JtaW5nIGJhc2ljIG1hdGhlbWF0aWNhbCBhbmQgbG9naWNhbCBvcGVy
+YXRpb25zLiAqDQoNCg0KYXJpdGhtZXRpYyBsb2dpYyB1bml0DQoNCg0KVGhlIF9fX19fX19fX19f
+X19fIGlzIHBhcnQgb2YgdGhlIHByb2Nlc3NvciB0aGF0IGZvbGxvd3MgaW5zdHJ1Y3Rpb25zIGFu
+ZCAgDQpkZWNpZGVzIHdoZW4gZGF0YSBzaG91bGQgYmUgc3RvcmVkLCByZWNlaXZlZCBvciB0cmFu
+c21pdHRlZCBieSBkaWZmZXJlbnQgIA0KcGFydHMgb2YgdGhlIGNvbXB1dGVyLiAqDQoNCg0KY29u
+dHJvbCB1bml0DQoNCg0KV2hlbiBhIHByb2Nlc3NvciBydW5zIG9yIF9fX19fX19fX18gaW5zdHJ1
+Y3Rpb25zLCBpdCBtZWFucyB0aGF0IHRoZSAgDQpwcm9jZXNzb3IgZm9sbG93cyBvciBwZXJmb3Jt
+cyBpbnN0cnVjdGlvbnMuICoNCg0KDQpleGVjdXRlcw0KDQoNCkEgc2VyaWVzIG9mIGluc3RydWN0
+aW9ucyBpcyBjYWxsZWQgYSBwcm9ncmFtIG9yIGEvYW4gX19fX19fX19fXy4gKg0KDQoNCnNvZnR3
+YXJlDQoNCg0KQS9hbiBfX19fX19fX18gaXMgYSBudW1iZXIgdGhhdCBpcyB1c2VkIHRvIGxvY2F0
+ZSBhIGJ5dGUgaW4gdGhlIG1lbW9yeS4gKg0KDQoNCmFkZHJlc3MNCg0KDQpfX19fX19fX19fIGFy
+ZSBleHRyZW1lbHkgZmFzdCBidXQgc21hbGwgZGF0YSBzdG9yYWdlIHNwYWNlcyB0aGF0IGFyZSB1
+c2VkICANCmRpcmVjdGx5IGJ5IHRoZSBBTFUgYW5kIGNvbnRyb2wgdW5pdC4gVGhleSBhcmUgcGh5
+c2ljYWxseSBsb2NhdGVkIGluc2lkZSAgDQp0aGUgcHJvY2Vzc29yIHRoYXQgY2Fubm90IGJlIGNo
+YW5nZWQgd2l0aG91dCBjaGFuZ2luZyB0aGUgcHJvY2Vzc29yLiAqDQoNCg0KcHJvY2Vzc29yIHJl
+Z2lzdGVycw0KDQoNCl9fX19fX19fXywgb3IgbWFpbiBtZW1vcnksIGlzIHdoZXJlIGRhdGEgYW5k
+IGluc3RydWN0aW9ucyBhcmUgc3RvcmVkICANCnRlbXBvcmFyaWx5IHNvIHRoYXQgdGhleSBjYW4g
+YmUgcXVpY2tseSBhY2Nlc3NlZCBieSB0aGUgcHJvY2Vzc29yIHdoZW4gIA0KbmVlZGVkLiAqDQoN
+Cg0KcmFuZG9tIGFjY2VzcyBtZW1vcnkNCg0KDQpEYXRhIHN0b3JlZCBpbiBSQU0gY2FuIGJlIGVh
+c2lseSBjaGFuZ2VkIGFuZCBpcyBhbHNvIF9fX19fX19fXywgd2hpY2ggbWVhbnMgIA0KdGhhdCBp
+dCBpcyBsb3N0IG9uY2UgdGhlIHBvd2VyIHN1cHBseSB0byB0aGUgY29tcHV0ZXIgaXMgaW50ZXJy
+dXB0ZWQuICoNCg0KDQp2b2xhdGlsZQ0KDQoNCl9fX19fX19fX19fIGlzIG1lbW9yeSB3aGVyZSBk
+YXRhIGFuZCBpbnN0cnVjdGlvbnMgdGhhdCByYXJlbHkgbmVlZCB0byAgDQpjaGFuZ2Ugb3Igd291
+bGQgYmUgbmVlZGVkIGZvciBhIGNvbXB1dGVyIHRvIHN0YXJ0IHVwIGFyZSBzdG9yZWQuIERhdGEg
+IA0Kc3RvcmVkIGNhbm5vdCBiZSBlYXNpbHkgY2hhbmdlZCBhbmQgcmVtYWlucyB0aGVyZSByZWdh
+cmRsZXNzIG9mIHdoZXRoZXIgdGhlICANCnBvd2VyIHN1cHBseSBpcyBzd2l0Y2hlZCBvbiBvciBv
+ZmYuICoNCg0KDQpyZWFkLW9ubHkgbWVtb3J5DQoNCg0KQS9hbiBfX19fX19fX19fXyBpcyBzZWNv
+bmRhcnkgc3RvcmFnZSB3aGVyZSBkYXRhIGlzIHN0b3JlZCBvbiByaWdpZCAgDQpyb3RhdGluZyBk
+aXNrcyBjb2F0ZWQgd2l0aCBtYWduZXRpYyBtYXRlcmlhbC4gKg0KDQoNCmhhcmQgZGlzaw0KDQoN
+CkEvYW4gX19fX19fX18gaXMgYSBjb2xsZWN0aW9uIG9mIHdpcmVzIHRoYXQgdHJhbnNwb3J0IGRh
+dGEgZnJvbSBvbmUgcGFydCBvZiAgDQphIGNvbXB1dGVyIHRvIGFub3RoZXIuICoNCg0KDQpidXMN
+Cg0KDQpBL2FuIF9fX19fX19fX18gaXMgYSBoYXJkd2FyZSBkZXZpY2UgdGhhdCBhbGxvd3MgdXNl
+cnMgdG8gZW50ZXIgZGF0YSBhbmQgIA0KaW5zdHJ1Y3Rpb25zIGludG8gYSBjb21wdXRlci4gRXhh
+bXBsZXMgYXJlIGtleWJvYXJkcywgbWljZSwgc2Nhbm5lcnMsIHRvdWNoICANCnNjcmVlbnMgYW5k
+IG1pY3JvcGhvbmVzLiAqDQoNCg0KaW5wdXQgZGV2aWNlDQoNCg0KQS9hbiBfX19fX19fX19fXyBp
+cyBhIGhhcmR3YXJlIGRldmljZSB1c2VkIHRvIGRpc3BsYXksIHByb2plY3Qgb3IgcHJpbnQgIA0K
+cHJvY2Vzc2VkIGRhdGEgZnJvbSBhIGNvbXB1dGVyIHNvIHRoYXQgaXQgY2FuIGJlIHVzZWQgb3Ig
+dW5kZXJzdG9vZCBieSAgDQpwZW9wbGUgdXNpbmcgdGhlIGNvbXB1dGVyLiBFeGFtcGxlcyBhcmUg
+bW9uaXRvcnMsIHNwZWFrZXJzIGFuZCBwcmludGVycy4gKg0KDQoNCm91dHB1dCBkZXZpY2UNCg0K
+DQpBL2FuIF9fX19fX19fIGRyaXZlIHN0b3JlcyBkYXRhIG9uIGEgbWFnbmV0aWMgbWF0ZXJpYWwg
+dGhhdCBjYW4gYmUgcmVhZCBvciAgDQp3cml0dGVuIGJ5IGEgbWFnbmV0aWMgaGVhZC4gQW4gZXhh
+bXBsZSBpcyBhIGhhcmQgZGlzay4gKg0KDQoNCm1hZ25ldGljDQoNCg0KQS9hbiBfX19fX19fXyBk
+cml2ZSBzdG9yZXMgZGF0YSBhcyB2ZXJ5IHNtYWxsIHBpdHMgb3IgaW5kZW50YXRpb25zIHRoYXQg
+Y2FuICANCmJlIHJlYWQgb3Igd3JpdHRlbiBieSBhIGxhc2VyLiBFeGFtcGxlcyBpbmNsdWRlIERp
+Z2l0YWwgVmVyc2F0aWxlIERpc2MgIA0KKERWRCkuICoNCg0KDQpvcHRpY2FsDQoNCg0KQS9hbiBf
+X19fX19fXyBkcml2ZSBzdG9yZXMgZGF0YSBpbiBlbGVjdHJvbmljIGNpcmN1aXRzIGNhbGxlZCDi
+gJxmbGFzaCAgDQptZW1vcnnigJ0gdGhhdCBoYXZlIG5vIG1vdmluZyBwYXJ0cy4gRXhhbXBsZXMg
+aW5jbHVkZSBtZW1vcnkgY2FyZHMuICoNCg0KDQpzb2xpZC1zdGF0ZQ0KDQoNCkNyZWF0ZSB5b3Vy
+IG93biBHb29nbGUgRm9ybQ0KDQpSZXBvcnQgQWJ1c2UNCg0KDQo=
+--000000000000d43dd50602429da2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style nonce=3D"FqWpX69A74VRwa81sD2XtQ">@import url(https://fon=
+ts.googleapis.com/css?family=3DGoogle+Sans:400,500|Roboto:300,400,400i,500,=
+700&subset=3Dlatin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-e=
+xt);</style><style nonce=3D"FqWpX69A74VRwa81sD2XtQ">[class=3D"x_body-conten=
+t-wrapper"] * {white-space: normal !important;}</style></head><body dir=3D"=
+ltr" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 14px; font-weight: 400; line-height: 20px;text-align: start; wo=
+rd-wrap: break-word; margin: 0; padding: 0; height: 100%; width: 100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(138,29,241);" width=3D"100%" role=3D"presentation"><tbody><tr heigh=
+t=3D"64px"><td style=3D"padding: 0 24px;"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display: inline-block; margin: 0; vertical-align: middle=
+;" width=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_l=
+ogo_lockup_white_2x.png"></td></tr></tbody></table><div class=3D"body-conte=
+nt-wrapper" style=3D"padding: 12px; background-color: rgb(246,246,246);"><d=
+iv style=3D"margin: 0 auto; max-width: 640px; min-width: 154px;"><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;padding: 20px;"><h1 style=3D"color: =
+#202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 20px; fon=
+t-weight: 400; line-height: 28px;margin: 0 0 12px;">Thanks for filling out =
+<a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSciPoHtJRPmu4YCfvUpHH02=
+8Pl8NiWuzBvw7MsZ0rptI_R3nA/viewform?pli=3D1&amp;pli=3D1&amp;usp=3Dmail_form=
+_link" target=3D"_blank" style=3D"white-space: pre-wrap;">Computing Keyword=
+ Revision Chapter 01</a></h1>Here's what was received.<div style=3D"margin-=
+top: 16px;"><div style=3D"margin-top: 24px"><a href=3D"https://docs.google.=
+com/forms/u/1/d/e/1FAIpQLSciPoHtJRPmu4YCfvUpHH028Pl8NiWuzBvw7MsZ0rptI_R3nA/=
+viewscore?pli=3D1&amp;pli=3D1&amp;viewscore=3DAE0zAgCj6dxro7CW1QMmWmmPuhvBQ=
+VcJE4ISraHQO2DNNeDlMf8XG3Od1jyeFk12vg" target=3D"_blank" style=3D"border-ra=
+dius: 4px;font-family: &#39;Google Sans&#39;,Roboto,Helvetica,Arial,sans-se=
+rif;font-size: 14px; font-weight: 500; padding: 8px 24px; text-align: cente=
+r; text-decoration: none;background-color: rgb(138,29,241); color: #fff;">V=
+iew score</a></div><div itemprop=3D"action" itemscope itemtype=3D"http://sc=
+hema.org/ViewAction"><meta itemprop=3D"url" content=3D"https://docs.google.=
+com/forms/u/1/d/e/1FAIpQLSciPoHtJRPmu4YCfvUpHH028Pl8NiWuzBvw7MsZ0rptI_R3nA/=
+viewscore?pli=3D1&amp;pli=3D1&amp;viewscore=3DAE0zAgCj6dxro7CW1QMmWmmPuhvBQ=
+VcJE4ISraHQO2DNNeDlMf8XG3Od1jyeFk12vg"><meta itemprop=3D"name" content=3D"V=
+iew your score"></div></div></div><div style=3D"border-bottom: 1px solid #d=
+adce0; border-left: 1px solid #dadce0; border-right: 1px solid #dadce0; bor=
+der-top: 8px solid rgb(138,29,241); padding: 20px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;"><h1 dir=3D"ltr" style=3D"font-fami=
+ly: Roboto,Helvetica,Arial,sans-serif;font-size: 32px; font-weight: 400; li=
+ne-height: 42px;white-space: pre-wrap;margin: 0 0 12px;">Computing Keyword =
+Revision Chapter 01</h1><div style=3D"white-space: pre-wrap;margin-bottom: =
+12px;">This is the culminated quiz of your Computing+ journey in SST.<br>Th=
+e quiz is categorised into chapters and is recommended for repeat attempts =
+to strengthen your memory of the O Level syllabus content. <br>FOR AUTO-MAR=
+KING, PLEASE FOLLOW THE CAPITALISATION OF THE GIVEN HELPING WORDS.</div><di=
+v dir=3D"ltr">Your email (<b>haziq_danish_bin_hairil_rizal@s2020.ssts.edu.s=
+g</b>) was recorded when you submitted this form.</div></div><div style=3D"=
+border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; borde=
+r-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padd=
+ing: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,=
+Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: =
+24px;white-space: pre-wrap;margin: 0 0 16px;">Class<span style=3D"color: #d=
+93025;" aria-label=3D"Required question"> *</span></h2></div><div style=3D"=
+padding: 0 12px;"><div style=3D"margin-top: 16px;"><table style=3D"color: #=
+202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px; font=
+-weight: 400; line-height: 20px;margin-top: 8px; table-layout: fixed;"><tr>=
+<td><div role=3D"radio" aria-checked=3D"true" aria-label=3D"S4-01" style=3D=
+"border: solid 2px #5f6368; height: 16px; width: 16px; border-radius: 50%;"=
+><div style=3D"background-color: #5f6368; border: solid 5px #5f6368; border=
+-radius: 50%; margin: 3px; height: 0; width: 0;"></div></div></td><td style=
+=3D"min-width: 8px;"></td><td style=3D"word-break: break-word;">S4-01</td><=
+/tr></table></div><div style=3D"margin-top: 16px;"><table style=3D"color: #=
+202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px; font=
+-weight: 400; line-height: 20px;color: #70757a;margin-top: 8px; table-layou=
+t: fixed;"><tr><td><div role=3D"radio" aria-checked=3D"false" aria-label=3D=
+"S4-07" style=3D"border: solid 2px #9aa0a6; height: 16px; width: 16px; bord=
+er-radius: 50%;"></div></td><td style=3D"min-width: 8px;"></td><td style=3D=
+"word-break: break-word;">S4-07</td></tr></table></div><div style=3D"margin=
+-top: 16px;"><table style=3D"color: #202124;font-family: Roboto,Helvetica,A=
+rial,sans-serif;font-size: 14px; font-weight: 400; line-height: 20px;color:=
+ #70757a;margin-top: 8px; table-layout: fixed;"><tr><td><div role=3D"radio"=
+ aria-checked=3D"false" aria-label=3D"S4-08" style=3D"border: solid 2px #9a=
+a0a6; height: 16px; width: 16px; border-radius: 50%;"></div></td><td style=
+=3D"min-width: 8px;"></td><td style=3D"word-break: break-word;">S4-08</td><=
+/tr></table></div></div></div><div style=3D"border: 1px solid #dadce0; padd=
+ing: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 1=
+2px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" =
+style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font=
+-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;marg=
+in: 0 0 16px;">Index Number<span style=3D"color: #d93025;" aria-label=3D"Re=
+quired question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div s=
+tyle=3D"border: 1px solid #dadce0; border-radius: 4px; display: inline-bloc=
+k; margin-top: 8px; max-width: 100%;"><table dir=3D"auto" style=3D"border-c=
+ollapse: collapse; color: #5f6368; max-width: 100%; margin: 12px 8px;"><tr>=
+<td><div style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-s=
+erif;font-size: 14px; font-weight: 400; line-height: 20px;color: #5f6368; w=
+ord-break: break-word; min-width: 100px; margin: 0 8px;">15</div></td><td s=
+tyle=3D"vertical-align: top;"><div style=3D"border-left: 5px solid transpar=
+ent; border-right: 5px solid transparent; border-top: 5px solid #5f6368; ma=
+rgin: 8px; height: 0; width: 0;"></div></td></tr></table></div></div></div>=
+<div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-colo=
+r: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div=
+ style=3D"padding: 0 12px;"><h3 dir=3D"auto" style=3D"color: #202124;font-f=
+amily: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 500;=
+ line-height: 24px;white-space: pre-wrap;margin: 0;">Select from the follow=
+ing helping words:</h3><div dir=3D"auto" style=3D"color: #202124;font-famil=
+y: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font-weight: 400; let=
+ter-spacing: .25px; line-height: 16px;white-space: pre-wrap;">bit, byte, co=
+mputer, computer architecture, data, gibibyte, gigabyte, kibibyte, kilobyte=
+, megabyte, mebibyte, tebibyte, terabyte</div></div><div style=3D"padding: =
+0 12px;"></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px=
+ 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margi=
+n-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"=
+color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16=
+px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 1=
+6px;">A/an __________ is a device that can receive data, process the data a=
+ccording to a sequence of instructions and produce the processed data as a =
+result.<span style=3D"color: #d93025;" aria-label=3D"Required question"> *<=
+/span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;=
+"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotte=
+d rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-blo=
+ck; max-width: 100%; min-width: 50%;">computer</div></div></div></div><div =
+style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #f=
+ff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div styl=
+e=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family=
+: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line=
+-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">__________ is inform=
+ation that is used in a computer program (singular: datum).<span style=3D"c=
+olor: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div s=
+tyle=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" sty=
+le=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);marg=
+in: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100%; mi=
+n-width: 50%;">data</div></div></div></div><div style=3D"border: 1px solid =
+#dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; mar=
+gin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 =
+dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sa=
+ns-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space: =
+pre-wrap;margin: 0 0 16px;">The __________ describes how a computer is desi=
+gned and built to function, including how its parts are designed, organised=
+ and connected.<span style=3D"color: #d93025;" aria-label=3D"Required quest=
+ion"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"widt=
+h: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1=
+px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: in=
+line-block; max-width: 100%; min-width: 50%;">computer architecture</div></=
+div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px=
+;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bot=
+tom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color=
+: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; f=
+ont-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;"=
+>A/an __________, or binary digit, is the smallest unit of data in a comput=
+er that can take on the value of either 0 or 1.<span style=3D"color: #d9302=
+5;" aria-label=3D"Required question"> *</span></h2></div><div style=3D"padd=
+ing: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-=
+space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8=
+px; min-height: 20px;display: inline-block; max-width: 100%; min-width: 50%=
+;">bit</div></div></div></div><div style=3D"border: 1px solid #dadce0; padd=
+ing: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 1=
+2px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" =
+style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font=
+-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;marg=
+in: 0 0 16px;">A/an __________ is a unit of data made up of 8 bits.<span st=
+yle=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2></di=
+v><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"a=
+uto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.=
+38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-width: =
+100%; min-width: 50%;">byte</div></div></div></div><div style=3D"border: 1p=
+x solid #dadce0; padding: 20px 12px;background-color: #fff; border-radius: =
+8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12p=
+x;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,=
+Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white=
+-space: pre-wrap;margin: 0 0 16px;">A __________ is made up of 1,000 bytes.=
+<span style=3D"color: #d93025;" aria-label=3D"Required question"> *</span><=
+/h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div =
+dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(=
+0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max=
+-width: 100%; min-width: 50%;">kilobyte</div></div></div></div><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"=
+padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Rob=
+oto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-heig=
+ht: 24px;white-space: pre-wrap;margin: 0 0 16px;">A __________ is made up o=
+f 1 x 10^6 bytes.<span style=3D"color: #d93025;" aria-label=3D"Required que=
+stion"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"wi=
+dth: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom:=
+ 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: =
+inline-block; max-width: 100%; min-width: 50%;">megabyte</div></div></div><=
+/div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background=
+-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"=
+><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;f=
+ont-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight:=
+ 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">A ________=
+__ is made up of 1 x 10^9 bytes.<span style=3D"color: #d93025;" aria-label=
+=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12px;">=
+<div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wra=
+p;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height=
+: 20px;display: inline-block; max-width: 100%; min-width: 50%;">gigabyte</d=
+iv></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px=
+ 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margi=
+n-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"=
+color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16=
+px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 1=
+6px;">A __________ is made up of 1 x 10^12 bytes.<span style=3D"color: #d93=
+025;" aria-label=3D"Required question"> *</span></h2></div><div style=3D"pa=
+dding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"whit=
+e-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0=
+ 8px; min-height: 20px;display: inline-block; max-width: 100%; min-width: 5=
+0%;">terabyte</div></div></div></div><div style=3D"border: 1px solid #dadce=
+0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bo=
+ttom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D=
+"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-ser=
+if;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wr=
+ap;margin: 0 0 16px;">A __________ is made up of 1024 bytes.<span style=3D"=
+color: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div =
+style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" st=
+yle=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);mar=
+gin: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100%; m=
+in-width: 50%;">kibibyte</div></div></div></div><div style=3D"border: 1px s=
+olid #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px=
+; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"=
+><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Ari=
+al,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-sp=
+ace: pre-wrap;margin: 0 0 16px;">A __________ is made up of 1024^2 bytes.<s=
+pan style=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h=
+2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div di=
+r=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,=
+0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-w=
+idth: 100%; min-width: 50%;">mebibyte</div></div></div></div><div style=3D"=
+border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; borde=
+r-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padd=
+ing: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,=
+Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: =
+24px;white-space: pre-wrap;margin: 0 0 16px;">A __________ is made up of 10=
+24^3 bytes.<span style=3D"color: #d93025;" aria-label=3D"Required question"=
+> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 1=
+00%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px d=
+otted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline=
+-block; max-width: 100%; min-width: 50%;">gibibyte</div></div></div></div><=
+div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color=
+: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div =
+style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-fa=
+mily: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; =
+line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">A __________ is =
+made up of 1024^4 bytes.<span style=3D"color: #d93025;" aria-label=3D"Requi=
+red question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div styl=
+e=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-=
+bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;di=
+splay: inline-block; max-width: 100%; min-width: 50%;">tebibyte</div></div>=
+</div></div><div style=3D"border-bottom: 1px solid #dadce0; border-left: 1p=
+x solid #dadce0; border-right: 1px solid #dadce0; border-top: 8px solid rgb=
+(138,29,241); padding: 0;background-color: #fff; border-radius: 8px; margin=
+-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 ;"><h2 dir=3D"=
+auto" style=3D"color: #fff;font-family: Roboto,Helvetica,Arial,sans-serif;f=
+ont-size: 16px; font-weight: 400; line-height: 24px;background-color: rgb(1=
+38,29,241); margin: 0; padding: 4px 24px 12px;border-bottom-left-radius: 8p=
+x; border-bottom-right-radius: 8px;"></h2></div><div style=3D"padding: 0 12=
+px;"></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12p=
+x;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bo=
+ttom: 12px;"><div style=3D"padding: 0 12px;"><h3 dir=3D"auto" style=3D"colo=
+r: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; =
+font-weight: 500; line-height: 24px;white-space: pre-wrap;margin: 0;">Selec=
+t from the following helping words:</h3><div dir=3D"auto" style=3D"color: #=
+202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font=
+-weight: 400; letter-spacing: .25px; line-height: 16px;white-space: pre-wra=
+p;">address, address bus, arithmetic logic unit, bus, central processing un=
+it, control unit, data bus, executes, hard disk, input, input device, magne=
+tic, memory, optical, output, output device, processor registers, random ac=
+cess memory, read-only memory, secondary storage, software, solid-state, vo=
+latile</div></div><div style=3D"padding: 0 12px;"></div></div><div style=3D=
+"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; bord=
+er-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"pad=
+ding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto=
+,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height:=
+ 24px;white-space: pre-wrap;margin: 0 0 16px;">A/an __________ =C2=A0or pro=
+cessor processes data and follows instructions; consists of an arithmetic l=
+ogic unit and a control unit.<span style=3D"color: #d93025;" aria-label=3D"=
+Required question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div=
+ style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;bo=
+rder-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20=
+px;display: inline-block; max-width: 100%; min-width: 50%;">central process=
+ing unit</div></div></div></div><div style=3D"border: 1px solid #dadce0; pa=
+dding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom:=
+ 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto=
+" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;fo=
+nt-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;ma=
+rgin: 0 0 16px;">__________ stores data, instructions and the results of pr=
+ocessing for immediate use in a computer.<span style=3D"color: #d93025;" ar=
+ia-label=3D"Required question"> *</span></h2></div><div style=3D"padding: 0=
+ 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space:=
+ pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; mi=
+n-height: 20px;display: inline-block; max-width: 100%; min-width: 50%;">mem=
+ory</div></div></div></div><div style=3D"border: 1px solid #dadce0; padding=
+: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px=
+;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" sty=
+le=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-si=
+ze: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin:=
+ 0 0 16px;">__________ stores large amounts of data that will not be lost w=
+hen the power supply is interrupted.<span style=3D"color: #d93025;" aria-la=
+bel=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12px=
+;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-=
+wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-hei=
+ght: 20px;display: inline-block; max-width: 100%; min-width: 50%;">secondar=
+y storage</div></div></div></div><div style=3D"border: 1px solid #dadce0; p=
+adding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom=
+: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"aut=
+o" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;f=
+ont-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;m=
+argin: 0 0 16px;">The __________ transfers data between memory and processo=
+r; it is bi-directional.<span style=3D"color: #d93025;" aria-label=3D"Requi=
+red question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div styl=
+e=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-=
+bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;di=
+splay: inline-block; max-width: 100%; min-width: 50%;">data bus</div></div>=
+</div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;bac=
+kground-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom:=
+ 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #2=
+02124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-=
+weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">The=
+ __________ transfers the required memory location from processor to memory=
+; it is uni-directional.<span style=3D"color: #d93025;" aria-label=3D"Requi=
+red question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div styl=
+e=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-=
+bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;di=
+splay: inline-block; max-width: 100%; min-width: 50%;">address bus</div></d=
+iv></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;=
+background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bott=
+om: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color:=
+ #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; fo=
+nt-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">=
+The _________ refers to data or instructions that the computer receives for=
+ processing.<span style=3D"color: #d93025;" aria-label=3D"Required question=
+"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: =
+100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px =
+dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inlin=
+e-block; max-width: 100%; min-width: 50%;">input</div></div></div></div><di=
+v style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: =
+#fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div st=
+yle=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-fami=
+ly: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; li=
+ne-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">The _________ refe=
+rs to intermediate or final results produced by the computer in the form of=
+ processed data.<span style=3D"color: #d93025;" aria-label=3D"Required ques=
+tion"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"wid=
+th: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: =
+1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: i=
+nline-block; max-width: 100%; min-width: 50%;">output</div></div></div></di=
+v><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-co=
+lor: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><d=
+iv style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font=
+-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 40=
+0; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">The _________=
+____ is part of the processor that processes data by performing basic mathe=
+matical and logical operations.<span style=3D"color: #d93025;" aria-label=
+=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12px;">=
+<div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wra=
+p;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height=
+: 20px;display: inline-block; max-width: 100%; min-width: 50%;">arithmetic =
+logic unit</div></div></div></div><div style=3D"border: 1px solid #dadce0; =
+padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-botto=
+m: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"au=
+to" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;=
+font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;=
+margin: 0 0 16px;">The ______________ is part of the processor that follows=
+ instructions and decides when data should be stored, received or transmitt=
+ed by different parts of the computer.<span style=3D"color: #d93025;" aria-=
+label=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12=
+px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pr=
+e-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-h=
+eight: 20px;display: inline-block; max-width: 100%; min-width: 50%;">contro=
+l unit</div></div></div></div><div style=3D"border: 1px solid #dadce0; padd=
+ing: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 1=
+2px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" =
+style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font=
+-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;marg=
+in: 0 0 16px;">When a processor runs or __________ instructions, it means t=
+hat the processor follows or performs instructions.<span style=3D"color: #d=
+93025;" aria-label=3D"Required question"> *</span></h2></div><div style=3D"=
+padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"wh=
+ite-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px=
+ 0 8px; min-height: 20px;display: inline-block; max-width: 100%; min-width:=
+ 50%;">executes</div></div></div></div><div style=3D"border: 1px solid #dad=
+ce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-=
+bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=
+=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-=
+serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre=
+-wrap;margin: 0 0 16px;">A series of instructions is called a program or a/=
+an __________.<span style=3D"color: #d93025;" aria-label=3D"Required questi=
+on"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width=
+: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1p=
+x dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inl=
+ine-block; max-width: 100%; min-width: 50%;">software</div></div></div></di=
+v><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-co=
+lor: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><d=
+iv style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font=
+-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 40=
+0; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">A/an ________=
+_ is a number that is used to locate a byte in the memory.<span style=3D"co=
+lor: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div st=
+yle=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" styl=
+e=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margi=
+n: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100%; min=
+-width: 50%;">address</div></div></div></div><div style=3D"border: 1px soli=
+d #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; m=
+argin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h=
+2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,=
+sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space=
+: pre-wrap;margin: 0 0 16px;">__________ are extremely fast but small data =
+storage spaces that are used directly by the ALU and control unit. They are=
+ physically located inside the processor that cannot be changed without cha=
+nging the processor.<span style=3D"color: #d93025;" aria-label=3D"Required =
+question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D=
+"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bott=
+om: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;displa=
+y: inline-block; max-width: 100%; min-width: 50%;">processor registers</div=
+></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16p=
+x;">_________, or main memory, =C2=A0is where data and instructions are sto=
+red temporarily so that they can be quickly accessed by the processor when =
+needed. <span style=3D"color: #d93025;" aria-label=3D"Required question"> *=
+</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%=
+;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dott=
+ed rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-bl=
+ock; max-width: 100%; min-width: 50%;">random access memory</div></div></di=
+v></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;backgro=
+und-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12p=
+x;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #20212=
+4;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weig=
+ht: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">Data st=
+ored in RAM can be easily changed and is also _________, which means that i=
+t is lost once the power supply to the computer is interrupted.<span style=
+=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2></div><=
+div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto=
+" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38)=
+;margin: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100=
+%; min-width: 50%;">volatile</div></div></div></div><div style=3D"border: 1=
+px solid #dadce0; padding: 20px 12px;background-color: #fff; border-radius:=
+ 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12=
+px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica=
+,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;whit=
+e-space: pre-wrap;margin: 0 0 16px;">___________ is memory where data and i=
+nstructions that rarely need to change or would be needed for a computer to=
+ start up are stored. Data stored cannot be easily changed and remains ther=
+e regardless of whether the power supply is switched on or off.<span style=
+=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2></div><=
+div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto=
+" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38)=
+;margin: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100=
+%; min-width: 50%;">read-only memory</div></div></div></div><div style=3D"b=
+order: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; border=
+-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"paddi=
+ng: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,H=
+elvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 2=
+4px;white-space: pre-wrap;margin: 0 0 16px;">A/an ___________ is secondary =
+storage where data is stored on rigid rotating disks coated with magnetic m=
+aterial.<span style=3D"color: #d93025;" aria-label=3D"Required question"> *=
+</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%=
+;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dott=
+ed rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-bl=
+ock; max-width: 100%; min-width: 50%;">hard disk</div></div></div></div><di=
+v style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: =
+#fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div st=
+yle=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-fami=
+ly: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; li=
+ne-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">A/an ________ is a=
+ collection of wires that transport data from one part of a computer to ano=
+ther.<span style=3D"color: #d93025;" aria-label=3D"Required question"> *</s=
+pan></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;">=
+<div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted =
+rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block=
+; max-width: 100%; min-width: 50%;">bus</div></div></div></div><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"=
+padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Rob=
+oto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-heig=
+ht: 24px;white-space: pre-wrap;margin: 0 0 16px;">A/an __________ is a hard=
+ware device that allows users to enter data and instructions into a compute=
+r. Examples are keyboards, mice, scanners, touch screens and microphones.<s=
+pan style=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h=
+2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div di=
+r=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,=
+0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-w=
+idth: 100%; min-width: 50%;">input device</div></div></div></div><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"=
+padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Rob=
+oto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-heig=
+ht: 24px;white-space: pre-wrap;margin: 0 0 16px;">A/an ___________ is a har=
+dware device used to display, project or print processed data from a comput=
+er so that it can be used or understood by people using the computer. Examp=
+les are monitors, speakers and printers.<span style=3D"color: #d93025;" ari=
+a-label=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 =
+12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: =
+pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min=
+-height: 20px;display: inline-block; max-width: 100%; min-width: 50%;">outp=
+ut device</div></div></div></div><div style=3D"border: 1px solid #dadce0; p=
+adding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom=
+: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"aut=
+o" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;f=
+ont-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;m=
+argin: 0 0 16px;">A/an ________ drive stores data on a magnetic material th=
+at can be read or written by a magnetic head. An example is a hard disk. <s=
+pan style=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h=
+2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div di=
+r=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,=
+0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-w=
+idth: 100%; min-width: 50%;">magnetic</div></div></div></div><div style=3D"=
+border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; borde=
+r-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padd=
+ing: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,=
+Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: =
+24px;white-space: pre-wrap;margin: 0 0 16px;">A/an ________ drive stores da=
+ta as very small pits or indentations that can be read or written by a lase=
+r. Examples include Digital Versatile Disc (DVD). <span style=3D"color: #d9=
+3025;" aria-label=3D"Required question"> *</span></h2></div><div style=3D"p=
+adding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"whi=
+te-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px =
+0 8px; min-height: 20px;display: inline-block; max-width: 100%; min-width: =
+50%;">optical</div></div></div></div><div style=3D"border: 1px solid #dadce=
+0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bo=
+ttom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D=
+"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-ser=
+if;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wr=
+ap;margin: 0 0 16px;">A/an ________ drive stores data in electronic circuit=
+s called =E2=80=9Cflash memory=E2=80=9D that have no moving parts. Examples=
+ include memory cards. <span style=3D"color: #d93025;" aria-label=3D"Requir=
+ed question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=
+=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-b=
+ottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;dis=
+play: inline-block; max-width: 100%; min-width: 50%;">solid-state</div></di=
+v></div></div></div><table align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"max-width: 672px; min-width: 154px; border-collapse: separa=
+te; border-spacing: 0 0.2em;" width=3D"100%" role=3D"presentation"><tbody><=
+tr height=3D"24px"><td></td></tr><tr><td><a href=3D"https://docs.google.com=
+/forms?usp=3Dmail_form_link" style=3D"color: #424242; font-size: 13px;">Cre=
+ate your own Google Form</a></td></tr><tr><td><a href=3D"https://docs.googl=
+e.com/forms/u/1/d/e/1FAIpQLSciPoHtJRPmu4YCfvUpHH028Pl8NiWuzBvw7MsZ0rptI_R3n=
+A/reportabuse?pli=3D1&amp;source=3Dhttps://docs.google.com/forms/d/e/1FAIpQ=
+LSciPoHtJRPmu4YCfvUpHH028Pl8NiWuzBvw7MsZ0rptI_R3nA/viewform?pli%3D1%26pli%3=
+D1&amp;usp=3Dmail_receipt_abuse" target=3D"_blank" style=3D"color: #424242;=
+ font-size: 13px;">Report Abuse</a></td></tr></tbody></table></div></body><=
+/html>
+--000000000000d43dd50602429da2--
