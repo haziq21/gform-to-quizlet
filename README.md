@@ -12,6 +12,6 @@ pip install -r requirements.txt
 
 Once the dependencies are installed,
 
-1. Download the email containing your responses to the Google form. Rename it to `input.eml` and place it in the same folder as `main.py`.
+1. Download the email(s) containing your Google form responses, then place them in the "input" folder.
 2. Run the script with `python3 main.py`.
-3. Copy the contents of `output.txt` into the "import" box on Quizlet's study set creation page.
+3. Copy the contents of the generated text files into the "import" box on Quizlet's study set creation page.
