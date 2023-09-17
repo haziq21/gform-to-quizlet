@@ -1,6 +1,6 @@
 # Google form to Quizlet quiz
 
-In preperation for O-Levels, my Computing class received Google forms to recap Computing terminology — (generally) one form for each chapter of the O-Level Computing textbook.
+In preperation for O-Levels, my Computing class received Google forms to recap Computing terminology (one form for each chapter of the O-Level Computing textbook).
 
 ![Questions from the Google form](questions.png)
 
