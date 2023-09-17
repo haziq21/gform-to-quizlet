@@ -8,7 +8,7 @@ A friend suggested that it might be helpful if the questions and answers from th
 
 ![Quizlet flashcards](flashcards.png)
 
-After you complete a Google form, you receive an email containing your responses. This script takes in those email files (`.eml`) and outputs a text file whose contents can be copied into Quizlet to create a flashcard set.
+After you complete a Google form, you receive an email containing your responses. This script takes in those email files (`.eml`) and outputs a text file whose contents can be copied into Quizlet to create a flashcard set. The assumption being made is that all the responses in the email are correct.
 
 ## Usage
 
