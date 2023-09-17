@@ -1,6 +1,14 @@
-# Google form response scraper
+# Google form to Quizlet quiz
 
-TODO: Write description.
+In preperation for O-Levels, my Computing class received Google forms to recap Computing terminology — (generally) one form for each chapter of the O-Level Computing textbook.
+
+![Questions from the Google form](questions.png)
+
+A friend suggested that it might be helpful if the questions and answers from the form were converted to [Quizlet](https://quizlet.com) flashcards, so that's what this short Python script does.
+
+![Quizlet flashcards](flashcards.png)
+
+After you complete a Google form, you receive an email containing your responses. This script takes in those email files (`.eml`) and outputs a text file whose contents can be copied into Quizlet to create a flashcard set.
 
 ## Usage
 
